@@ -10,8 +10,8 @@
       <div class="product-detail">
         <h2>{{ product.title }}</h2>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt eligendi sed
-          cupiditate eius dolores consequatur explicabo dignissimos magnam amet eveniet!
+          {{ product.description }}
+
         </p>
       </div>
     </div>
@@ -20,6 +20,7 @@
 
 <script>
 export default {
+
   name: "product",
   props: ["product"],
 };
@@ -46,6 +47,9 @@ export default {
 }
 .product-inner.pink {
   background-image: linear-gradient(to bottom right, #f444a4, #1168d4);
+}
+.product-inner.bluePink {
+  background-image: linear-gradient(45deg, #ff00ff 0%, #00ffff 100%);
 }
 
 .product-text-wrap {
@@ -95,5 +99,6 @@ export default {
   line-height: 1.5;
   font-weight: 300;
   color: #676767;
+  text-align: justify;
 }
 </style>
